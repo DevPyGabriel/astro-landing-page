@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-background: #FFF9EB;
+  --color-main: #412B03;
+  --color-secondary: #FFE78965;
+  --color-tertiary: #FED7D6;
+  --color-icon: #FFE789;
+
+  /* Breakpoints */
+  --breakpoint-2xs: 400px;
+  --breakpoint-xs: 480px;
+  --breakpoint-regular: 924px;
+  --breakpoint-fixed: 670px;
+
+  /* Fonts */
+  --font-bellota: 'Bellota Text', system-ui;
+}
+
+.bellota-text-stroke {
+  -webkit-text-stroke: 3px #412B03;
+}
+
+.bellota-text-stroke-small {
+  -webkit-text-stroke: 1px #412B03;
+}
+
+/* Custom positioning for SoftStar on screens >840px */
+@media (min-width: 924px) {
+  .softstar-custom {
+    top: -42px !important;
+    left: 0 !important;
+  }
+}

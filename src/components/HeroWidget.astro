@@ -1,0 +1,32 @@
+---
+import Leaf from "./icons/Leaf.astro"
+import SpiralContainer from "./containers/SpiralContainer.astro"
+import LoveContainer from "./containers/LoveContainer.astro"
+import CupcakeContainer from "./containers/CupcakeContainer.astro"
+---
+
+<style>
+  section {
+    line-height: 0;
+  }
+</style>
+
+<section class="p-4 bg-icon/50 flex justify-between items-center w-full mt-5 lg:mt-4 rounded-xl outline-dashed outline-2 outline-main/30 relative overflow-hidden">
+
+  <LoveContainer />
+  <SpiralContainer />
+  <CupcakeContainer />
+  <div class="absolute -top-16 rotate-94 -left-14 -z-10">
+    <Leaf />
+  </div>
+  <div class="absolute left-1/2 -top-12 rotate-290 -z-10">
+    <Leaf />
+  </div>
+  <div class="absolute left-36 -bottom-22 rotate- -z-10">
+    <Leaf />
+  </div>
+  <div class="absolute rotate-0 -right-12  -z-10">
+    <Leaf />
+  </div>
+
+</section>

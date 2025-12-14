@@ -1,0 +1,20 @@
+---
+import Cupcake from "../icons/Cupcake.astro"
+
+const widgetCupcakeText = 'Pasteles personalizados y postres unicos.'
+---
+
+<div 
+  class="
+  flex h-26 flex-col justify-between
+  2xs:h-25 
+  fixed:flex-row fixed:items-center fixed:gap-x-2 fixed:h-fit md:items-start 
+  regular:flex-col w-5/16 regular:w-3/10 regular:h-30"
+>
+  <Cupcake class="size-12 xs:size-14 regular:size-16 box-border p-2 bg-main rounded-md"/>
+  <div class="w-6/6 regular:w-fit">
+    <span class="text-xs fixed:text-sm font-medium text-main/90 tracking-tighter leading-3 fixed:leading-4 text-pretty">
+      {widgetCupcakeText}
+    </span>
+  </div>
+</div>
