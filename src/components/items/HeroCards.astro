@@ -1,0 +1,36 @@
+---
+import CartBtn from "./CartBtn.astro";
+
+interface Props {
+  titleName: string;
+  contentText: string;
+  bgColor: string;
+}
+
+const {titleName} = Astro.props;
+const {contentText} = Astro.props;
+const {bgColor} = Astro.props
+---
+
+<div
+      class={`h-3/6 ${bgColor} rounded-xl p-4 regular:max-w-72 flex flex-col justify-between sm:p-5`}
+    >
+      <h3
+        class="
+        text-3xl font-bold tracking-tighter text-main/95 pb-2
+        xs:pb-0 xs:text-lg
+        fixed:text-3xl"
+      >
+        {titleName}
+      </h3>
+      <p
+        class="text-main/60 text-xs
+          xs:text-xs xs:leading-4 xs:tracking-tight
+          sm:text-sm sm:leading-5"
+      >
+        {contentText}
+      </p>
+
+      <CartBtn text="Postres" />
+
+</div>

@@ -6,18 +6,19 @@ import Logo from "./icons/Logo.astro";
 
 <header id="menuContainer" class="flex justify-center items-center py-3 px-4 md:py-4 w-full mx-auto fixed top-0 right-0 left-0 backdrop-blur-xl bg-secondary z-50 border-b border-main/10">
         
-	<nav id="menuDesktop" class="hidden md:flex gap-x-4 md:justify-between md:items-center w-full max-w-[1000px]">
+	<nav id="menuDesktop" class="hidden md:flex gap-x-4 md:justify-between md:items-center w-full max-w-[1400px]">
     <div>
       <Logo id="logo" class="size-7" />
     </div>
 		<div class="flex items-center gap-x-6 font-semibold text-main tracking-tight">
-      <a href="#" class="group relative inline-block">
+      <a href="#top" class="group relative inline-block">
       <span 
       class="relative z-10">Inicio
       </span>
       <span 
       class="absolute -bottom-px left-0 h-0.5 w-full bg-main/85 transform origin-bottom-right scale-x-0 transition-transform duration-300 ease-out group-hover:origin-bottom-left group-hover:scale-x-100">
       </span>
+      </a>
       
       <a href="#" class="group relative inline-block">
       <span 
@@ -26,6 +27,7 @@ import Logo from "./icons/Logo.astro";
       <span 
       class="absolute -bottom-px left-0 h-0.5 w-full bg-main/85 transform origin-bottom-right scale-x-0 transition-transform duration-300 ease-out group-hover:origin-bottom-left group-hover:scale-x-100">
       </span>
+      </a>
 
       <a href="#" class="group relative inline-block">
       <span 
@@ -34,8 +36,8 @@ import Logo from "./icons/Logo.astro";
       <span 
       class="absolute -bottom-px left-0 h-0.5 w-full bg-main/85 transform origin-bottom-right scale-x-0 transition-transform duration-300 ease-out group-hover:origin-bottom-left group-hover:scale-x-100">
       </span>
-
       </a>
+
       <a href="#" class="group relative inline-block">
       <span 
       class="relative z-10">Servicios
@@ -43,6 +45,7 @@ import Logo from "./icons/Logo.astro";
       <span 
       class="absolute -bottom-px left-0 h-0.5 w-full bg-main/85 transform origin-bottom-right scale-x-0 transition-transform duration-300 ease-out group-hover:origin-bottom-left group-hover:scale-x-100">
       </span>
+      </a>
 
       <a class=" transition-all duration-300 ease-in-out bg-yellow-300 px-3 py-1 rounded-full hover:bg-main hover:text-yellow-200" href="#contacto">
         Date un gusto!
@@ -131,6 +134,42 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-expanded', 'false');
       if (iconOpen && iconClose) { iconOpen.classList.remove('hidden'); iconClose.classList.add('hidden'); }
     }
+  });
+
+  // Manejar scroll suave para enlaces de anclaje
+  function handleSmoothScroll(e) {
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const targetId = href.substring(1);
+      
+      // Caso especial para #top - scroll al inicio de la página
+      if (targetId === 'top' || targetId === '') {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        return;
+      }
+      
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const headerHeight = document.getElementById('menuContainer')?.offsetHeight || 80;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+        
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+
+  // Aplicar scroll suave a todos los enlaces de anclaje (desktop y mobile)
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', handleSmoothScroll);
   });
 });
 </script>

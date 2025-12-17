@@ -1,15 +1,15 @@
 ---
-import BtnPrimary from "./BtnPrimary.astro"
+import BtnPrimary from "./items/BtnPrimary.astro"
 import HeroTextVector from "./vectors/HeroTextVector.astro"
-import HeroWidget from "./HeroWidget.astro"
+import HeroWidget from "./containers/HeroWidget.astro"
 
 const heroTitle = 'El arte de la Reposteria'
 
 const heroText = 'Sabemos que cada celebración es única. Trabajamos contigo paso a paso para crear un pastel que no solo se vea increíble, sino que también tenga un sabor exquisito, utilizando solo los mejores ingredientes.'
 ---
 
-<div 
-    class="flex-col w-full regular:max-w-[440px] lg:max-w-[520px] overflow-visible"
+<section 
+    class="flex flex-col justify-between w-full regular:max-w-[500px] lg:max-w-[620px] xl:max-w-[530px] hero:max-w-[630px] overflow-visible"
 >
   <h1
     class="font-bellota font-bold tracking-tighter xs:text-7xl bellota-text-stroke text-main max-w-84 xs:leading-16 mb-8 text-6xl leading-14"
@@ -17,15 +17,15 @@ const heroText = 'Sabemos que cada celebración es única. Trabajamos contigo pa
 
   <div class="relative overflow-visible">
     <span 
-      class="text-lg md:text-2xl leading-5 md:leading-8 text-main tracking-tight font-bellota bellota-text-stroke-small opacity-65 text-"
+      class="text-2xl hero:text-2xl hero:leading-8 text-main tracking-tight font-bellota bellota-text-stroke-small opacity-65"
     >{heroText}</span>
 
     <HeroTextVector 
-      class="size-68 xs:size-84  regular:size-92 absolute text-icon regular:text-tertiary inset-0 m-auto regular:inset-0 regular:m-auto -z-5 overflow-visible rotate-12" 
+      class="size-68 xs:size-84  regular:size-92 absolute text-icon/75 regular:text-tertiary inset-0 m-auto regular:inset-0 regular:m-auto -z-5 overflow-visible rotate-12" 
     />
-  </div>
-  <div class="mt-2 -mx-1">
+    <div class="mt-3 -mx-1">
       <BtnPrimary />
+    </div>
   </div>
   <HeroWidget />
-</div>
+</section>

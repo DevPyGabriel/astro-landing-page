@@ -13,6 +13,7 @@
   --breakpoint-xs: 480px;
   --breakpoint-regular: 924px;
   --breakpoint-fixed: 670px;
+  --breakpoint-hero: 85rem;
 
   /* Fonts */
   --font-bellota: 'Bellota Text', system-ui;
@@ -20,6 +21,9 @@
 
 .bellota-text-stroke {
   -webkit-text-stroke: 3px #412B03;
+}
+.bellota-text-stroke-large {
+  -webkit-text-stroke: 4px #412B03;
 }
 
 .bellota-text-stroke-small {

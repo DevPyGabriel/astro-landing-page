@@ -1,14 +1,31 @@
 ---
-import SoftStar from "./vectors/SoftStar.astro"
+import SoftStar from "./vectors/SoftStar.astro";
+import HeroCards from "./items/HeroCards.astro";
+
+const artesaniaText = "Cada pastel es el resultado de horas de dedicación para garantizar no solo una belleza inigualable, sino también un sabor que sus invitados recordarán por siempre.";
+
+const artesaniaTitle = "Artesania";
+
+const celebrationText = "Trabajamos de la mano con ustedes para diseñar un pastel que refleje su historia, su estilo y el tema de su evento, convirtiendo el postre en el centro de miradas.";
+
+const celebrationTitle = "Celebracion";
 ---
 
-<div>
-  <div class="relative">
-    <SoftStar class="size-16 sm:size-24 text-icon overflow-visible absolute -top-6 sm:left-76 sm:-top-8 left-40 softstar-custom"/>
-    <img
-      class="w-[190px] h-[287px] sm:h-[535px] sm:w-[357px] regular:h-[630px] regular:w-[429px] rounded-2xl shadow-2xl shadow-icon/60"
-      src="/CakeEdited.jpg"
-      alt="Imagen de Pastel de Bodas hecho por NanesCake"
-    >
+<div class="flex flex-col gap-y-2 xs:flex-row xs:gap-x-3 xl:gap-x-4 relative">
+  <SoftStar
+    class="size-20 xs:16 sm:size-24 text-icon overflow-visible absolute xs:-top-9 sm:left-72 md:-top-8 xs:left-36 -top-7 -left-4 softstar-custom"
+  />
+  <img
+    class="xs:w-[190px] xs:h-[287px]
+      sm:h-[535px] sm:w-[357px]
+      regular:h-[630px] regular:w-[429px]
+      rounded-2xl shadow-2xl shadow-icon/60"
+    src="/CakeEdited.jpg"
+    alt="Imagen de Pastel de Bodas hecho por NanesCake"
+  />
+
+  <div class="regular:hidden flex flex-col xl:flex xl:flex-col gap-y-2 xs:gap-y-3 xl:gap-y-4">
+    <HeroCards bgColor="bg-tertiary" titleName={artesaniaTitle} contentText={artesaniaText} />
+    <HeroCards bgColor="bg-icon/50" titleName={celebrationTitle} contentText={celebrationText} />
   </div>
 </div>

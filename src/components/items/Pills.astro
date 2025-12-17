@@ -1,0 +1,22 @@
+---
+import Star from '../icons/Star.astro';
+
+interface Props {
+  content: string;
+  points: string;
+  stars: string;
+}
+
+const {content = "Pasteles"} = Astro.props
+const {points = "5"} = Astro.props
+const {stars = "4"} = Astro.props
+---
+
+<div class="flex items-center gap-x-2 bg-white px-2 py-1.5 rounded-full w-fit">
+  <span class="inline-flex tracking-tight text-main font-semibold pl-2.5 text-base md:text-lg">
+    {content}
+  </span>
+  <span class="flex justify-center items-center bg-main/20 rounded-full size-6 md:size-8 text-main font-bold text-sm md:text-base">
+    4
+  </span>
+</div>

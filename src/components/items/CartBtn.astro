@@ -1,0 +1,24 @@
+---
+import ShopCart from "../icons/ShopCart.astro";
+
+interface Props {
+  text: string;
+}
+
+const { text = "Add to Cart" } = Astro.props;
+---
+
+<button type="button" class="hidden sm:inline-flex items-center text-icon bg-main box-border shadow-xs font-medium leading-5 rounded-base text-sm w-fit rounded-lg relative">
+  <a href="#" class="flex justify- items-center px-3 py-2.5">
+    <ShopCart />
+    <span class="text-base tracking-tight">{text}</span>
+  </a>
+
+  <div class="absolute -top-1 -right-1">
+    <span class="relative flex size-3.5">
+      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-icon opacity-75"></span>
+      <span class="absolute inline-flex h-full w-full rounded-full bg-icon"></span>
+    </span>
+  </div>
+
+</button>
