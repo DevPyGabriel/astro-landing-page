@@ -11,16 +11,16 @@ import Star from "./icons/Star.astro";
 </style>
 
 <section
-  class="bg-main/10 p-7 regular:p-8 mt-8 rounded-3xl flex items-start gap-x-2 regular:gap-x-4 flex-col regular:flex-row regular:gap-y-0 divide-y divide-main/30 regular:divide-none"
+  class="bg-main/10 p-7 regular:p-8 mt-8 rounded-3xl flex items-center gap-x-2 regular:gap-x-4 flex-col regular:flex-row regular:gap-y-0 divide-y divide-main/30 regular:divide-none"
 >
-  <div class="flex flex-col gap-y-6 regular:w-6/12 pb-5">
+  <div class="flex flex-col gap-y-6 regular:w-6/12 pb-5 regular:pb-0">
     <h1
       class="text-4xl xs:text-5xl font-bold text-main bellota-text-stroke font-bellota 2xs:bellota-text-stroke-large tracking leading-11"
     >
       Con suficiente azucar, todo es bueno.
     </h1>
     <div
-      class="flex gap-y-3 flex-col 2sm:flex-row 2sm:items-center regular:gap-x-4 2sm:justify-between"
+      class="flex gap-y-3 flex-col 2sm:flex-row 2sm:items-center regular:gap-x-4 justify-items-end"
     >
       <div class="flex items-center gap-x-4">
         <Avatar class="size-16 rounded-full" />
@@ -41,7 +41,7 @@ import Star from "./icons/Star.astro";
 
   <div class="w-px self-stretch bg-main/30 mx-1 hidden 2sm:flex"></div>
 
-  <div class="flex-col pt-4 regular:pt-0 regular:w-6/12">
+  <div class="flex flex-col justify-between pt-4 regular:pt-0 regular:w-6/12">
     <div class="flex items-center justify-start gap-x-4 2sm:pb-3 pl-2">
       <div>
         <span class="text-4xl font-bold text-main tracking-tight align-middle">
@@ -69,9 +69,9 @@ import Star from "./icons/Star.astro";
       <Pills content="Postres" points="5" />
       <Pills content="Cupcakes" points="4" />
       <Pills content="Pasteles" points="5" />
+      <Pills content="Crema de limon" points="5" />
       <Pills content="Galletas" points="4" />
       <Pills content="Brownies" points="5" />
-      <Pills content="Crema de limon" points="5" />
     </div>
   </div>
 </section>
