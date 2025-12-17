@@ -5,11 +5,13 @@ interface Props {
   titleName: string;
   contentText: string;
   bgColor: string;
+  btnText: string;
 }
 
 const {titleName} = Astro.props;
 const {contentText} = Astro.props;
 const {bgColor} = Astro.props
+const {btnText} = Astro.props
 ---
 
 <div
@@ -31,6 +33,6 @@ const {bgColor} = Astro.props
         {contentText}
       </p>
 
-      <CartBtn text="Postres" />
+      <CartBtn text={btnText} />
 
 </div>
