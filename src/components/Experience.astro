@@ -3,26 +3,36 @@ import Pills from "./items/Pills.astro";
 import Avatar from "./icons/Avatar.astro";
 ---
 
-<main class="bg-main/10 p-6 regular:p-8 mt-8 rounded-3xl flex items-start gap-x-2 regular:gap-x-4 flex-col regular:flex-row gap-y-3 regular:gap-y-0">
+<style>
+  section {
+    line-height: 0;
+  }
+</style>
 
-  <section class="flex flex-col gap-y-8">
-    <h1 class="text-5xl font-bold text-main font-bellota bellota-text-stroke-large tracking-wide">Con suficiente azucar todo es bueno.</h1>
-    <div class="flex items-center justify-between regular:gap-x-4">
+<main class="bg-main/10 p-7 regular:p-8 mt-8 rounded-3xl flex items-start gap-x-2 regular:gap-x-4 flex-col regular:flex-row gap-y-3 regular:gap-y-0">
+
+  <section class="flex flex-col gap-y-8 regular:w-7/12">
+    <h1 class="text-4xl xs:text-5xl font-bold text-main bellota-text-stroke font-bellota 2xs:bellota-text-stroke-large tracking leading-11">
+      Con suficiente azucar todo es bueno.
+    </h1>
+    <div class="flex items-center regular:gap-x-4">
       <div class="flex items-center gap-x-4">
         <Avatar class="size-16 rounded-full" />
-        <span class="flex">Pastelera profesional con +5 años de experiencia</span>
+        <span class="flex leading-5 text-main/90 tracking-tight">Pastelera profesional con +5 años de experiencia</span>
       </div>
-      <a href="#">
-        <span>Que es lo que preparamos ?</span>
+      <a href="#" class="justify-end">
+        <span class="text-sm xs:text-base text-main tracking-tight leading-5 underline decoration-main/50 font-semibold">Que es lo que preparamos?</span>
       </a>
     </div>
   </section>
   <div class="w-0.5 h-full bg-main"></div>
-  <section class="flex flex-wrap gap-2 regular:gap-4">
-    <Pills content="Postres" />
-    <Pills content="Cupcakes" />
-    <Pills content="Pasteles" />
-    <Pills content="Cookies" />
+  <section class="flex flex-wrap gap-2 regular:gap-4 regular:w-5/12">
+    <Pills content="Postres" points="5" />
+    <Pills content="Cupcakes" points="4" />
+    <Pills content="Pasteles" points="5" />
+    <Pills content="Galletas" points="4" />
+    <Pills content="Brownies" points="5" />
+    <Pills content="Crema de limon" points="5" />
   </section>
 
 </main>
