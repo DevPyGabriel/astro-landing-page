@@ -3,16 +3,17 @@ import ShopCart from "../icons/ShopCart.astro";
 
 interface Props {
   text: string;
+  anchor: string;
 }
 
-const { text = "Add to Cart" } = Astro.props;
+const { text = "Add to Cart", anchor } = Astro.props;
 ---
 
-<button type="button" class="xs:hidden sm:inline-flex items-center text-icon bg-main box-border shadow-xs font-medium leading-5 rounded-base text-sm w-fit rounded-lg relative">
-  <a href="#" class="flex items-center px-3 py-2.5">
+<a href={anchor} class="xs:hidden sm:inline-flex items-center text-icon bg-main box-border shadow-xs font-medium leading-5 rounded-base text-sm w-fit rounded-lg relative">
+  <span class="flex items-center px-3 py-2.5">
     <ShopCart />
     <span class="text-base tracking-tight">{text}</span>
-  </a>
+  </span>
 
   <div class="absolute -top-1 -right-1">
     <span class="relative flex size-3.5">
@@ -21,4 +22,4 @@ const { text = "Add to Cart" } = Astro.props;
     </span>
   </div>
 
-</button>
+</a>
