@@ -10,11 +10,11 @@ const {content = "Pasteles"} = Astro.props
 const {points = "5"} = Astro.props
 ---
 
-<div class="flex items-center gap-x-3 bg-white px-2 py-1.5 rounded-full w-fit">
-  <span class="inline-flex tracking-tight text-main font-semibold pl-2 text-base md:text-lg">
+<div class="flex items-center gap-x-3 bg-white px-2 py-1.5 rounded-full w-fit transition-all duration-200 group hover:bg-yellow-300">
+  <span class="inline-flex tracking-tight text-main font-semibold pl-2 text-base md:text-lg transition-all duration-200 cursor-default select-none">
     {content}
   </span>
-  <span class="flex justify-center items-center bg-main/20 rounded-full size-6 md:size-8 text-main font-bold text-sm md:text-base">
+  <span class="flex justify-center items-center bg-main/20 rounded-full size-6 md:size-8 text-main font-bold text-sm md:text-base transition-all duration-200 group-hover:text-yellow-300 group-hover:bg-main cursor-default select-none">
     {points}
   </span>
 </div>

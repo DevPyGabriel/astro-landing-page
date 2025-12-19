@@ -1,0 +1,13 @@
+---
+import Dessert from "./icons/Dessert.astro";
+
+interface Props {
+  content: string;
+}
+
+const {content = "Heading"} = Astro.props
+---
+<h1 class="text-5xl font-semibold font-bellota tracking-tight bellota-text-stroke text-main flex items-center gap-x-2 pt-6 pl-2">
+  {content}
+  <Dessert class="size-10" />
+</h1>

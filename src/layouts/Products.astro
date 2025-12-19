@@ -1,4 +1,6 @@
 ---
+import Arrow from '../components/icons/Arrow.astro';
+
 const sms = 'https://wa.link/cm77za'
 
 const PRODUCTS = [
@@ -12,14 +14,14 @@ const PRODUCTS = [
   {
     link:`${sms}`,
     image: "p2.webp",
-    title: "Postre de brownie con manjar & arequipe",
+    title: "Postre de brownie con dulce de leche",
     description:
       "In today's fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations.",
   },
   {
     link:`${sms}`,
     image: "p3.webp",
-    title: "Postre de fresa con crema",
+    title: "Postre de fresa con crema & galleta",
     description:
       "In today's fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations.",
   },
@@ -33,7 +35,7 @@ const PRODUCTS = [
   {
     link:`${sms}`,
     image: "p5.webp",
-    title: "Postre de Limon con galleta",
+    title: "Postre de Limon con galleta & crema",
     description:
       "In today's fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations.",
   },
@@ -44,49 +46,39 @@ const PRODUCTS = [
   <div
     id="product-slider"
     class="
-      flex gap-4 overflow-x-scroll scroll-smooth py-6 
+      flex gap-4 sm:gap-5 overflow-x-scroll scroll-smooth py-2 
       cursor-grab active:cursor-grabbing select-none
       no-scrollbar
-      mask-[linear-gradient(to_right,transparent,black_0%,black_94%,transparent)]
-      [-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_94%,transparent)]
+      sm:mask-[linear-gradient(to_right,transparent,black_0%,black_90%,transparent)]
+      sm:[-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_90%,transparent)]
+      mask-[linear-gradient(to_right,transparent,black_0%,black_97%,transparent)]
+      [-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_97%,transparent)]
     "
   >
     {PRODUCTS.map(({ title, description, image, link }) => (
-      <article class="bg-white/70 block max-w-sm min-w-[20rem] shrink-0 p-6 rounded-2xl shadow-lg">
+      <article class="bg-white/70 block max-w-2xs min-w-2xs xs:max-w-xs xs:min-w-xs sm:max-w-sm sm:min-w-sm shrink-0 p-4 xs:px-6  xs:py-6 rounded-2xl shadow-lg">
         <img
           src={image}
           alt={title}
-          class="rounded-xl w-full h-64 object-cover"
+          class="rounded-lg xs:rounded-xl w-full h-64 object-cover"
           draggable="false"
         />
 
-        <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-primary leading-7">
+        <h5 class="mt-4 mb-3 text-2xl font-semibold tracking-tight text-primary leading-7">
           {title}
         </h5>
 
-        <p class="mb-6 text-main/70">
+        <p class="mb-4 text-main/70">
           {description}
         </p>
 
         <a href={link}
           class="inline-flex items-center text-main bg-icon hover:bg-main hover:text-icon
                 shadow-sm font-medium
-                 tracking-tight leading-5 rounded-lg text-sm px-4 py-2.5"
+                tracking-tight leading-5 rounded-lg text-sm px-4 py-2.5"
         >
           Reserva
-          <svg
-            class="w-4 h-4 ms-1.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 12H5m14 0-4 4m4-4-4-4"
-            />
-          </svg>
+          <Arrow class="size-4 ms-1.5" />
         </a>
       </article>
     ))}
