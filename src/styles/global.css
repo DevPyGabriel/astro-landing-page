@@ -8,6 +8,7 @@
   --color-secondary: #FFE78965;
   --color-tertiary: #FED7D6;
   --color-icon: #FFE789;
+  --color-test: hsl(48, 100%, 77%, 0.65);
 
   /* Breakpoints */
   --breakpoint-2xs: 400px;
@@ -52,4 +53,13 @@
   -ms-overflow-style: none;  /* IE y Edge */
   scrollbar-width: none;  /* Firefox */
   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+}
+
+.carrousel-animation {
+  animation: carrousel 12s infinite linear;
+}
+
+@keyframes carrousel {
+  from {translate: 0;}
+  to {translate: -100%;}
 }

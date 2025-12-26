@@ -1,4 +1,5 @@
 ---
+import Heading from '../components/Heading.astro';
 import Arrow from '../components/icons/Arrow.astro';
 
 const sms = 'https://wa.link/cm77za'
@@ -42,21 +43,19 @@ const PRODUCTS = [
 ]
 ---
 
-<section class="relative w-full" id="products">
+<section class="relative w-full overflow-visible" id="products">
+  <Heading content="Postres" className="pt-8 pb-1 pl-2"/>
   <div
     id="product-slider"
     class="
-      flex gap-4 sm:gap-5 overflow-x-scroll scroll-smooth py-2 
-      cursor-grab active:cursor-grabbing select-none
-      no-scrollbar
-      sm:mask-[linear-gradient(to_right,transparent,black_0%,black_90%,transparent)]
-      sm:[-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_90%,transparent)]
-      mask-[linear-gradient(to_right,transparent,black_0%,black_97%,transparent)]
-      [-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_97%,transparent)]
+      flex gap-4 sm:gap-5 pb-4 sm:pb-12 px-1
+      cursor-w-resize active:cursor-grabbing select-none no-scrollbar overflow-x-scroll scroll-smooth
+      sm:mask-[linear-gradient(to_right,transparent,black_0%,black_90%,transparent)] sm:[-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_90%,transparent)] 
+      mask-[linear-gradient(to_right,transparent,black_0%,black_97%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_0%,black_97%,transparent)]
     "
   >
     {PRODUCTS.map(({ title, description, image, link }) => (
-      <article class="bg-white/70 block max-w-2xs min-w-2xs xs:max-w-xs xs:min-w-xs sm:max-w-sm sm:min-w-sm shrink-0 p-4 xs:px-6  xs:py-6 rounded-2xl shadow-lg">
+      <article class="bg-white/70 block max-w-2xs min-w-2xs xs:max-w-xs xs:min-w-xs sm:max-w-sm sm:min-w-sm shrink-0 p-4 xs:px-6 xs:py-6 rounded-2xl shadow-lg">
         <img
           src={image}
           alt={title}
@@ -88,29 +87,31 @@ const PRODUCTS = [
 <script>
   const slider = document.getElementById("product-slider")
 
-  let isDown = false
-  let startX = 0
-  let scrollLeft = 0
+  if (slider) {
+    let isDown = false
+    let startX = 0
+    let scrollLeft = 0
 
-  slider.addEventListener("mousedown", (e) => {
-    isDown = true
-    startX = e.pageX - slider.offsetLeft
-    scrollLeft = slider.scrollLeft
-  })
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true
+      startX = e.pageX - slider.offsetLeft
+      scrollLeft = slider.scrollLeft
+    })
 
-  slider.addEventListener("mouseleave", () => {
-    isDown = false
-  })
+    slider.addEventListener("mouseleave", () => {
+      isDown = false
+    })
 
-  slider.addEventListener("mouseup", () => {
-    isDown = false
-  })
+    slider.addEventListener("mouseup", () => {
+      isDown = false
+    })
 
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return
-    e.preventDefault()
-    const x = e.pageX - slider.offsetLeft
-    const walk = (x - startX) * 1.5
-    slider.scrollLeft = scrollLeft - walk
-  })
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return
+      e.preventDefault()
+      const x = e.pageX - slider.offsetLeft
+      const walk = (x - startX) * 1.5
+      slider.scrollLeft = scrollLeft - walk
+    })
+  }
 </script>
