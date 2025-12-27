@@ -1,0 +1,76 @@
+---
+import Instagram from "../components/icons/Instagram.astro";
+import Whatsapp from "../components/icons/Whatsapp.astro";
+import Logo from "../components/icons/Logo.astro";
+
+---
+
+
+
+<footer class="bg-icon/25">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-4 sm:py-6">
+        <div class="md:flex md:justify-between">
+          <div class="mb-3 md:mb-0">
+              <a href="https://flowbite.com/" class="flex items-center">
+                  <Logo />
+              </a>
+          </div>
+          <div class="grid grid-cols-2 2xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8 sm:grid-cols-3">
+              <div>
+                <h2 class="mb-6 text-primary text-lg font-semibold uppercase">Siguenos</h2>
+                <ul class="text-main/75">
+                    <li class="mb-2 sm:mb-4">
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Facebook</a>
+                    </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mb-6 text-lg font-semibold uppercase text-primary">Resources</h2>
+                <ul class="text-main/75">
+                    <li class="mb-2 sm:mb-4">
+                        <a href="https://flowbite.com/" class="hover:underline">Inicio</a>
+                    </li>
+                    <li class="mb-2 sm:mb-4">
+                        <a href="https://tailwindcss.com/" class="hover:underline">Contacto</a>
+                    </li>
+                    <li class="mb-2 sm:mb-4">
+                        <a href="https://tailwindcss.com/" class="hover:underline">Postres</a>
+                    </li>
+                </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-primary text-lg font-semibold uppercase">Contacto</h2>
+                  <ul class="text-main/75">
+                      <li class="mb-2 sm:mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Correo</a>
+                      </li>
+                      <li class="mb-2 sm:mb-4">
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Telefono</a>
+                      </li>
+                      <li>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Social</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-main/40 sm:mx-auto lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-main sm:text-center">© 2025 <a href="https://flowbite.com/" class="hover:underline">NanesCake</a>. Todos los derechos reservados.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="#" class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary">
+                <Instagram class="size-6 sm:size-8" />
+                <span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary ms-3 sm:ms-6">
+                <Whatsapp class="size-6 sm:size-8" />
+                <span class="sr-only">WhatsApp</span>
+            </a>
+          </div>
+      </div>
+    </div>
+</footer>
