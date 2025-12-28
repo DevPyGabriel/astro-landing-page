@@ -1,0 +1,16 @@
+---
+import Arrow from "../icons/Arrow.astro";
+  
+const { link = 'https://wa.link/cm77za' } = Astro.props;
+const { innerText = 'Reserva'} = Astro.props;
+---
+
+<a href={link}
+  class="
+  inline-flex items-center transition-all duration-100 text-icon bg-main hover:text-main hover:bg-tertiary
+  shadow-sm font-medium w-fit
+  tracking-tight leading-5 rounded-lg text-sm px-4 py-2.5"
+>
+  {innerText}
+  <Arrow class="size-4 ms-1.5" />
+</a>

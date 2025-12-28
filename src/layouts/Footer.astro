@@ -1,19 +1,33 @@
 ---
 import Instagram from "../components/icons/Instagram.astro";
 import Whatsapp from "../components/icons/Whatsapp.astro";
-import Logo from "../components/icons/Logo.astro";
+import FixedLogo from "../components/icons/FixedLogo.astro";
+import ShippingCart from "../components/icons/ShippingCart.astro";
+import ReserveBtn from "../components/items/ReserveBtn.astro";
 
 ---
 
 
 
 <footer class="bg-icon/25">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-4 sm:py-6">
-        <div class="md:flex md:justify-between">
-          <div class="mb-3 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <Logo />
+    <div class="mx-auto w-full max-w-screen-xl p-4 sm:p-6 py-4 sm:py-6">
+			<div class="regular:flex regular:justify-between">
+				<div class="mb-6 regular:mb-0 flex flex-col gap-y-4 regular:w-6/12 lg:w-7/12">
+              <a href="#top" class="flex items-center">
+                  <FixedLogo />
               </a>
+              <p class="text-primary/60">
+                ¡Tu tienda de postres en línea! Delicias irresistibles a un clic de distancia, listas para endulzar tus momentos especiales.
+              </p>
+              <div class="flex flex-col xs:flex-row gap-y-2 xs:items-center gap-x-8">
+                <div class="flex items-center gap-x-1">
+									<a href="https://wa.link/cm77za" class="transition-all duration-200 hover:scale-110">
+											<ShippingCart class="size-12 text-primary" />
+									</a>
+									<span class="text-main/90 font-bellota bellota-text-stroke-md text-xl">+56 9 2184 7396</span>
+								</div>
+								<ReserveBtn innerText="Reserva ahora" />
+              </div>
           </div>
           <div class="grid grid-cols-2 2xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8 sm:grid-cols-3">
               <div>
@@ -28,7 +42,7 @@ import Logo from "../components/icons/Logo.astro";
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-lg font-semibold uppercase text-primary">Resources</h2>
+                <h2 class="mb-6 text-lg font-semibold uppercase text-primary">Links</h2>
                 <ul class="text-main/75">
                     <li class="mb-2 sm:mb-4">
                         <a href="https://flowbite.com/" class="hover:underline">Inicio</a>

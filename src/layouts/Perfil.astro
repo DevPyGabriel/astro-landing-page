@@ -1,0 +1,36 @@
+---
+import Fast from "../components/icons/Fast.astro"
+import Support from "../components/icons/Support.astro"
+import Customer from "../components/icons/Customer.astro"
+
+const CustomersText = "+200 clientes satisfechos y felices";
+const CustomerServiceText = "Excelente atención al cliente 24/7";
+const ShippingText = "Entregas en menos de 48/72 horas";
+
+const container = "flex regular:flex-col flex-row items-center gap-x-4 text-primary px-4";
+
+const content = "mt-4 leading-5 text-main/70 tracking-tighter text-sm xs:text-lg sm:text-xl font-medium";
+---
+
+<section class="w-fit justify-center items-center flex bg-tertiary/30 rounded-3xl mb-16 px-2 md:px-4 py-6 md:py-12 mx-auto border-main/10 border-2">
+  <div class="gap-y-3 regular:divide-x-2 divide-main/20 grid grid-cols-1 grid-row-1 regular:grid-cols-3 justify-between items-center w-full">
+
+    <div class={`${container}`}>
+      <Customer class="size-16" />
+      <h4 class={`${content}`}>{CustomersText}</h4>
+    </div>
+    <div class={`${container}`}>
+      <Support class="size-16" />
+      <h4 class={`${content}`}>{CustomerServiceText}</h4>
+    </div>
+    <div class={`${container}`}>
+      <Fast class="size-16" />
+      <h4 class={`${content}`}>{ShippingText}</h4>
+    </div>
+
+  </div>
+</section>
+
+<script>
+
+</script>
