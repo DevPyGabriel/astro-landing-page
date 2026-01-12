@@ -5,7 +5,9 @@ const { link = 'https://wa.link/cm77za' } = Astro.props;
 const { innerText = 'Reserva'} = Astro.props;
 ---
 
-<a href={link}
+<a
+  target="_blank"
+  href={link}
   class="
   inline-flex items-center transition-all duration-100 text-icon bg-main hover:text-main hover:bg-tertiary
   shadow-sm font-medium w-fit

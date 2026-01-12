@@ -4,87 +4,115 @@ import Whatsapp from "../components/icons/Whatsapp.astro";
 import FixedLogo from "../components/icons/FixedLogo.astro";
 import ShippingCart from "../components/icons/ShippingCart.astro";
 import ReserveBtn from "../components/items/ReserveBtn.astro";
-
 ---
 
-
-
 <footer class="bg-icon/25 border-t border-main/10">
-    <div class="mx-auto w-full max-w-[1400px] p-4 sm:p-6 py-4 sm:py-6">
-			<div class="regular:flex regular:justify-between">
-				<div class="mb-6 regular:mb-0 flex flex-col gap-y-4 regular:w-6/12 lg:w-7/12">
-              <a href="#top" class="flex items-center">
-                  <FixedLogo />
-              </a>
-              <p class="text-primary/60">
-                ¡Tu tienda de postres en línea! Delicias irresistibles a un clic de distancia, listas para endulzar tus momentos especiales.
-              </p>
-              <div class="flex flex-col xs:flex-row gap-y-2 xs:items-center gap-x-8">
-                <div class="flex items-center gap-x-1">
-									<a href="https://wa.link/cm77za" class="transition-all duration-200 hover:scale-110">
-											<ShippingCart class="size-12 text-primary" />
-									</a>
-									<span class="text-main/90 font-bellota bellota-text-stroke-md text-xl">+56 9 2184 7396</span>
-								</div>
-								<ReserveBtn innerText="Reserva ahora" />
-              </div>
+  <div class="mx-auto w-full max-w-[1400px] p-4 sm:p-6 py-4 sm:py-6">
+    <div class="regular:flex regular:justify-between">
+      <div
+        class="mb-6 regular:mb-0 flex flex-col gap-y-4 regular:w-6/12 lg:w-7/12"
+      >
+        <div class="flex items-center">
+          <FixedLogo />
+        </div>
+        <p class="text-main/75">
+          ¡Tu tienda de postres en línea! Delicias irresistibles a un clic de
+          distancia, listas para endulzar tus momentos especiales.
+        </p>
+        <div class="flex flex-col xs:flex-row gap-y-2 xs:items-center gap-x-8">
+          <div class="flex items-center gap-x-1">
+            <a
+              href="https://wa.link/cm77za"
+              class="transition-all duration-200 hover:scale-110"
+              target="_blank"
+            >
+              <ShippingCart class="size-12 text-primary" />
+            </a>
+            <span
+              class="text-main/90 font-bellota bellota-text-stroke-md text-xl"
+              >+56 9 2184 7396</span
+            >
           </div>
-          <div class="grid grid-cols-2 2xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8 sm:grid-cols-3">
-              <div>
-                <h2 class="mb-6 text-primary text-lg font-semibold uppercase">Siguenos</h2>
-                <ul class="text-main/75">
-                    <li class="mb-2 sm:mb-4">
-                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Facebook</a>
-                    </li>
-                </ul>
-              </div>
-              <div>
-                <h2 class="mb-6 text-lg font-semibold uppercase text-primary">Links</h2>
-                <ul class="text-main/75">
-                    <li class="mb-2 sm:mb-4">
-                        <a href="https://flowbite.com/" class="hover:underline">Inicio</a>
-                    </li>
-                    <li class="mb-2 sm:mb-4">
-                        <a href="https://tailwindcss.com/" class="hover:underline">Contacto</a>
-                    </li>
-                    <li class="mb-2 sm:mb-4">
-                        <a href="https://tailwindcss.com/" class="hover:underline">Postres</a>
-                    </li>
-                </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-primary text-lg font-semibold uppercase">Contacto</h2>
-                  <ul class="text-main/75">
-                      <li class="mb-2 sm:mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Correo</a>
-                      </li>
-                      <li class="mb-2 sm:mb-4">
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Telefono</a>
-                      </li>
-                      <li>
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Social</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+          <ReserveBtn innerText="Reserva ahora" />
+        </div>
       </div>
-      <hr class="my-6 border-main/40 sm:mx-auto lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-main sm:text-center">© 2025 <a href="https://flowbite.com/" class="hover:underline">NanesCake</a>. Todos los derechos reservados.
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="#" class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary">
-                <Instagram class="size-6 sm:size-8" />
-                <span class="sr-only">Instagram</span>
-            </a>
-            <a href="#" class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary ms-3 sm:ms-6">
-                <Whatsapp class="size-6 sm:size-8" />
-                <span class="sr-only">WhatsApp</span>
-            </a>
-          </div>
+      <div
+        class="grid grid-cols-2 2xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8 sm:grid-cols-3"
+      >
+        <div>
+          <h2 class="mb-6 text-primary text-lg font-semibold uppercase">
+            Siguenos
+          </h2>
+          <ul class="text-main/75">
+            <li class="mb-2 sm:mb-4">
+              <a
+                href="https://www.instagram.com/nanescakee?igsh=MTlxdGRrNHQ2ZzMwdg=="
+                class="hover:underline"
+                target="_blank">Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-lg font-semibold uppercase text-primary">
+            Links
+          </h2>
+          <ul class="text-main/75">
+            <li class="mb-2 sm:mb-4">
+              <a href="#top" class="hover:underline">Inicio</a>
+            </li>
+            <li class="mb-2 sm:mb-4">
+              <a href="#postres" class="hover:underline"
+                >Postres</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-primary text-lg font-semibold uppercase">
+            Contacto
+          </h2>
+          <ul class="text-main/75">
+            <li class="mb-2 sm:mb-4">
+              <a
+                href="mailto:nanescakesweet@gmail.com"
+                class="hover:underline" target="_blank">Correo</a
+              >
+            </li>
+            <li class="mb-2 sm:mb-4">
+              <a href="https://wa.link/cm77za" target="_blank" class="hover:underline"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <hr class="my-6 border-main/40 sm:mx-auto lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-main sm:text-center"
+        >© 2025 <a href=""" class="hover:underline" target="_blank"
+          >NanesCake</a
+        >. Todos los derechos reservados.
+      </span>
+      <div class="flex mt-4 sm:justify-center sm:mt-0">
+        <a
+          href="https://www.instagram.com/nanescakee?igsh=MTlxdGRrNHQ2ZzMwdg=="
+          class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary"
+          target="_blank"
+        >
+          <Instagram class="size-6 sm:size-8" />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a
+          href="https://wa.link/cm77za"
+          class="text-main/70 transition-all duration-200 hover:-translate-y-1 hover:text-primary ms-3 sm:ms-6"
+          target="_blank"
+        >
+          <Whatsapp class="size-6 sm:size-8" />
+          <span class="sr-only">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
