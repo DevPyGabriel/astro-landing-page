@@ -55,11 +55,19 @@
   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
 }
 
+
 .carrousel-animation {
   animation: carrousel 12s infinite linear;
 }
 
+/* Fallback para mask-image en Safari y navegadores que no soportan gradientes complejos */
+.carrousel-mask {
+  /* Fallback: solo transparencia a los lados */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
 @keyframes carrousel {
-  from {translate: 0;}
-  to {translate: -100%;}
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
