@@ -13,10 +13,13 @@ const celebrationTitle = "Celebracion";
 
 <div class="flex flex-col gap-y-8 xs:flex-row xs:gap-x-3 xl:gap-x-4 relative">
   <SoftStar
-    class="size-20 xs:16 sm:size-24 text-icon overflow-visible absolute xs:-top-9 sm:left-72 md:-top-8 xs:left-36 -top-7 -left-4 softstar-custom"
+    class="size-20 xs:16 sm:size-24 text-icon overflow-visible absolute xs:-top-9 sm:left-72 md:-top-8 xs:left-36 -top-7 -left-4 softstar-custom z-10 hero__animation"
   />
+
   <img
-    class="xs:w-[190px] xs:h-[287px]
+    class="
+      hero__animation
+      xs:w-[190px] xs:h-[287px]
       sm:h-[535px] sm:w-[357px]
       regular:h-[630px] regular:w-[429px]
       rounded-2xl shadow-2xl shadow-icon/60"
@@ -24,8 +27,22 @@ const celebrationTitle = "Celebracion";
     alt="Imagen de Pastel de Bodas hecho por NanesCake"
   />
 
-  <div class="regular:hidden flex flex-col xl:flex xl:flex-col gap-y-3 xs:gap-y-3 xl:gap-y-4">
+  <div class="regular:hidden flex flex-col xl:flex xl:flex-col gap-y-3 xs:gap-y-3 xl:gap-y-4 hero__animation">
     <HeroCards bgColor="bg-icon/50" titleName={celebrationTitle} contentText={celebrationText} btnText="Postres" link="#products"/>
     <HeroCards bgColor="bg-tertiary" titleName={artesaniaTitle} contentText={artesaniaText} btnText="Pasteles" link="#top"/>
   </div>
 </div>
+
+<script>
+  // Cargar GSAP desde CDN y ejecutar animación
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
+  script.onload = () => {
+    gsap.fromTo(
+      '.hero__animation',
+      { opacity: 0, y: -50},
+      { opacity: 1, y:0 , duration: 1, ease: 'power2.out' }
+    );
+  };
+  document.head.appendChild(script);
+</script>

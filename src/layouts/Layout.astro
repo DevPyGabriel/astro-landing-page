@@ -21,14 +21,10 @@ import '@fontsource/bellota-text/700.css';
 		<title>Nanes Cake - Reposteria</title>
 	</head>
 	<body>
+
+		<div class="fixed top-0 -z-10 h-full w-full bg-background"></div>
+		<slot />
 		
-		<div class="fixed top-0 -z-10 h-full w-full bg-background">
-		</div>
-
-		<main class="px-4 regular:mt-6 scroll-mt-20 mx-auto w-full max-w-[1400px] overflow-visible">
-			<slot />
-		</main>
-
 	</body>
 </html>
 

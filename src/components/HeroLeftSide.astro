@@ -12,12 +12,12 @@ const heroText = 'Sabemos que cada celebración es única. Trabajamos contigo pa
     class="flex flex-col justify-between w-full regular:max-w-[500px] lg:max-w-[620px] xl:max-w-[530px] hero:max-w-[630px] overflow-visible"
 >
   <h1
-    class="font-bellota font-bold tracking-tighter xs:text-7xl bellota-text-stroke text-main max-w-84 xs:leading-16 mb-8 text-6xl leading-14"
+    class="font-bellota font-bold tracking-tighter xs:text-7xl bellota-text-stroke text-main max-w-84 xs:leading-16 mb-8 text-6xl leading-14 hero__animation__left"
   >{heroTitle}</h1>
 
-  <div class="relative overflow-visible">
+  <div class="relative overflow-visible hero__animation__left">
     <span 
-      class="text-2xl hero:text-2xl hero:leading-8 text-main tracking-tight font-bellota bellota-text-stroke-small opacity-65"
+      class="text-xl md:text-2xl hero:leading-8 text-main tracking-tight font-bellota bellota-text-stroke-small opacity-60"
     >{heroText}</span>
 
     <HeroTextVector 
@@ -29,3 +29,17 @@ const heroText = 'Sabemos que cada celebración es única. Trabajamos contigo pa
   </div>
   <HeroWidget />
 </section>
+
+<script>
+  // Cargar GSAP desde CDN y ejecutar animación
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
+  script.onload = () => {
+    gsap.fromTo(
+      '.hero__animation__left',
+      { opacity: 0, y: 40},
+      { opacity: 1, y: 0 , duration: 1.2, ease: 'power2.out' }
+    );
+  };
+  document.head.appendChild(script);
+</script>

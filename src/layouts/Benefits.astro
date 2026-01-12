@@ -1,0 +1,88 @@
+---
+import CleanShipping from "../components/icons/CleanShipping.astro";
+import CustomDesign from "../components/icons/CustomDesign.astro";
+import Homemade from "../components/icons/Homemade.astro";
+
+const BENEFITS = [
+  {
+    title: "Diseños Exclusivos",
+    text: "Creamos piezas únicas basadas en tus ideas y temáticas favoritas. Cada detalle visual se trabaja con precisión para que tu postre sea el centro de atención y refleje fielmente tu estilo personal en cada celebración especial.",
+  },
+  {
+    title: "Sabor Casero",
+    text: "Tú eliges los rellenos, masas y niveles de dulzor según tu preferencia. Utilizamos ingredientes frescos de alta calidad para garantizar un sabor auténtico, alejándonos de lo industrial para ofrecerte una experiencia artesanal única.",
+  },
+  {
+    title: "Entrega Impecable",
+    text: "Nos enfocamos en brindarte un proceso de compra sencillo, cercano y seguro. Garantizamos que cada pedido llegue en perfectas condiciones y a tiempo, cuidando la logística para que tú solo tengas que disfrutar de un momento inolvidable.",
+  },
+]
+
+const childContainerClass = "p-4 md:p-6 rounded-xl bg-main/5 lg:w-full md:w-11/12 w-full";
+const childHeadingClass = "text-3xl xl:text-4xl text-main font-bold font-bellota bellota-text-stroke-md";
+const childTextClass = "text-main/80 tracking-tight xl:text-base text-sm";
+---
+
+<section class="py-8 xl:py-14">
+  <div class="flex flex-col items-center lg:flex-row w-full">
+    <div>
+      <img 
+        class="max-h-[700px] xl:max-h-[800px] rounded-2xl"
+        src="pastelBenefits.webp" 
+        alt="">
+    </div>
+    <div class="h-fit lg:w-6/12 lg:pl-6 flex flex-col items-center gap-y-6 mt-8 lg:mt-0">
+      {BENEFITS.map((benefit) => (
+        <div class={childContainerClass}>
+          <div class="pb-2 flex items-end gap-2">
+            <span class={childHeadingClass}>
+              {benefit.title}
+            </span>
+            {benefit.title === "Diseños Exclusivos" && <CustomDesign class="size-8 xl:size-10 text-main"/>}
+            {benefit.title === "Sabor Casero" && <Homemade class="size-8 xl:size-10 text-main"/>}
+            {benefit.title === "Entrega Impecable" && <CleanShipping class="size-8 xl:size-10 text-main"/>}
+          </div>
+          <p class={childTextClass}>
+            {benefit.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- 
+      <div class="p-4 md:p-6 rounded-xl bg-main/5 lg:w-full md:w-11/12 w-full">
+        <div class="pb-2 flex items-end gap-2">
+          <span class="text-3xl xl:text-4xl text-main font-bold font-bellota bellota-text-stroke-md">
+            Diseños Exclusivos
+          </span>
+          <CustomDesign class="size-8 xl:size-10 text-main"/>
+        </div>
+        <p class="text-main/80 tracking-tight xl:text-base text-sm">
+          Creamos piezas únicas basadas en tus ideas y temáticas favoritas. Cada detalle visual se trabaja con precisión para que tu postre sea el centro de atención y refleje fielmente tu estilo personal en cada celebración especial.
+        </p>
+      </div>
+      <div class="p-4 md:p-6 rounded-xl bg-main/5 lg:w-full md:w-11/12 w-full">
+        <div class="pb-2 flex items-end gap-2">
+          <span class="text-3xl xl:text-4xl text-main font-bold font-bellota bellota-text-stroke-md">
+            Sabor Casero
+          </span>
+          <Homemade class="size-8 xl:size-10 text-main"/>
+        </div>
+        <p class="text-main/80 tracking-tight xl:text-base text-sm">
+          Tú eliges los rellenos, masas y niveles de dulzor según tu preferencia. Utilizamos ingredientes frescos de alta calidad para garantizar un sabor auténtico, alejándonos de lo industrial para ofrecerte una experiencia artesanal única.
+        </p>
+      </div>
+      <div class="p-4 md:p-6 rounded-xl bg-main/5 lg:w-full md:w-11/12 w-full">
+        <div class="pb-2 flex items-end gap-2">
+          <span class="text-3xl xl:text-4xl text-main font-bold font-bellota bellota-text-stroke-md">
+            Entrega Impecable
+          </span>
+          <CleanShipping class="size-8 xl:size-10 text-main"/>
+        </div>
+        <p class="text-main/80 tracking-tight xl:text-base text-sm">
+          Nos enfocamos en brindarte un proceso de compra sencillo, cercano y seguro. Garantizamos que cada pedido llegue en perfectas condiciones y a tiempo, cuidando la logística para que tú solo tengas que disfrutar de un momento inolvidable.
+        </p>
+      </div>
+-->

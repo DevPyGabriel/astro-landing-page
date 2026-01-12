@@ -11,22 +11,36 @@ import CupcakeContainer from "./CupcakeContainer.astro"
   }
 </style>
 
-<section class="p-4 bg-icon/50 flex justify-between items-center w-full mt-5 lg:mt-4 rounded-xl border-2 border-dashed border-main/30 relative overflow-hidden">
+<section class="p-4 bg-icon/50 flex justify-between items-center w-full mt-5 lg:mt-4 rounded-xl border-2 border-dashed border-main/30 relative overflow-hidden hero__animation__widget">
 
   <LoveContainer />
   <SpiralContainer />
   <CupcakeContainer />
   <div class="absolute -top-16 rotate-94 -left-14 -z-10">
-    <Leaf />
+    <Leaf class="opacity-60"/>
   </div>
   <div class="absolute left-1/2 -top-12 rotate-290 -z-10">
-    <Leaf />
+    <Leaf class="opacity-60"/>
   </div>
   <div class="absolute left-36 -bottom-22 rotate- -z-10">
-    <Leaf />
+    <Leaf class="opacity-60"/>
   </div>
   <div class="absolute rotate-0 -right-12  -z-10">
-    <Leaf />
+    <Leaf class="opacity-60"/>
   </div>
 
 </section>
+
+<script>
+  // Cargar GSAP desde CDN y ejecutar animación
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
+  script.onload = () => {
+    gsap.fromTo(
+      '.hero__animation__widget',
+      { opacity: 0, y: 40},
+      { opacity: 1, y: 0 , duration: 1.2, ease: 'power2.out' }
+    );
+  };
+  document.head.appendChild(script);
+</script>

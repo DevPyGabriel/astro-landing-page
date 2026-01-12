@@ -11,7 +11,7 @@ import Star from "./icons/Star.astro";
 </style>
 
 <section
-  class="bg-main/10 p-7 regular:p-8 mt-8 rounded-3xl flex items-center gap-x-2 regular:gap-x-4 flex-col regular:flex-row regular:gap-y-0 divide-y divide-main/30 regular:divide-none"
+  class="bg-main/10 p-7 regular:p-8 mt-8 rounded-3xl flex items-center gap-x-2 regular:gap-x-4 flex-col regular:flex-row regular:gap-y-0 divide-y divide-main/30 regular:divide-none experience__animation"
 >
   <div class="flex flex-col gap-y-4 xs:gap-y-6 regular:w-6/12 pb-5 regular:pb-0">
     <h1
@@ -75,3 +75,17 @@ import Star from "./icons/Star.astro";
     </div>
   </div>
 </section>
+
+<script>
+  // Cargar GSAP desde CDN y ejecutar animación
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
+  script.onload = () => {
+    gsap.fromTo(
+      '.experience__animation',
+      { opacity: 0, y: 60},
+      { opacity: 1, y: 0 , duration: 1.2, ease: 'power2.out' }
+    );
+  };
+  document.head.appendChild(script);
+</script>
