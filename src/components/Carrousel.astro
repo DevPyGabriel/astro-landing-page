@@ -10,30 +10,36 @@ const cakeImages = [
 ]
 ---
 
-<section class="" id="pasteles"> 
-    <Heading content="Pasteles Personalizados" className="pt-4 pb-3 pl-2"/>
-  <div 
-    class="w-full flex overflow-x-auto no-scrollbar pb-10 sm:pb-16 carrousel-mask"
-  >
-  
-    <div class="flex gap-4 carrousel-animation pr-4">
-      {cakeImages.map((image) => (
-        <img
-          draggable="false"
-          class="rounded-4xl h-[328px] w-[328px] shrink-0 shadow-xl select-none"
-          src={image}
-          alt="Cake Image"
-        />
-      ))}
-    </div>
-    <div class="flex gap-4 carrousel-animation pr-4">
-      {cakeImages.map((image) => (
-        <img
-          class="rounded-4xl h-[328px] w-[328px] shrink-0 shadow-xl carrousel-img"
-          src={image}
-          alt="Cake Image"
-        />
-      ))}
+<section id="pasteles" class="w-full overflow-hidden">
+  <Heading content="Pasteles Personalizados" className="pt-4 pb-3 pl-2"/>
+
+  <div class="relative w-full overflow-hidden pb-10 sm:pb-16 carrousel-mask">
+    <div class="flex w-max carrousel-track">
+      
+      <!-- BLOQUE 1 -->
+      <div class="flex gap-4 pr-4">
+        {cakeImages.map((image) => (
+          <img
+            draggable="false"
+            class="rounded-4xl h-[300px] w-[300px] md:h-[400px] md:w-[400px] flex-shrink-0 select-none"
+            src={image}
+            alt="Cake Image"
+          />
+        ))}
+      </div>
+
+      <!-- BLOQUE 2 (COPIA) -->
+      <div class="flex gap-4 pr-4">
+        {cakeImages.map((image) => (
+          <img
+            draggable="false"
+            class="rounded-4xl h-[300px] w-[300px] md:h-[400px] md:w-[400px] flex-shrink-0 select-none"
+            src={image}
+            alt="Cake Image"
+          />
+        ))}
+      </div>
+
     </div>
   </div>
 </section>

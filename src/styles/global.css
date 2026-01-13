@@ -57,17 +57,39 @@
 
 
 .carrousel-animation {
-  animation: carrousel 12s infinite linear;
+  animation: carrousel 10s infinite linear;
 }
 
 /* Fallback para mask-image en Safari y navegadores que no soportan gradientes complejos */
 .carrousel-mask {
   /* Fallback: solo transparencia a los lados */
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+    );
+
+  -webkit-mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
 }
 
 @keyframes carrousel {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carrousel-track {
+  animation: carrousel 12s linear infinite;
+  will-change: transform;
 }
