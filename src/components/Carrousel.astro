@@ -2,21 +2,19 @@
 import Heading from "./Heading.astro"
 
 const cakeImages = [
-  '/Carrousel/Capy.webp',
-  '/Carrousel/Siren.webp',
-  '/Carrousel/Stitch.webp',
-  '/Carrousel/Cherry.webp',
-  '/Carrousel/Funny.webp',
+  'Capy.webp',
+  'Siren.webp',
+  'Stitch.webp',
+  'Cherry.webp',
+  'Funny.webp',
 ]
 ---
 
 <section class="" id="pasteles"> 
     <Heading content="Pasteles Personalizados" className="pt-4 pb-3 pl-2"/>
   <div 
-    class="
-    w-full flex overflow-x-auto no-scrollbar pb-10 sm:pb-16
-    mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
-  ">
+    class="w-full flex overflow-x-auto no-scrollbar pb-10 sm:pb-16 carrousel-mask"
+  >
   
     <div class="flex gap-4 carrousel-animation pr-4">
       {cakeImages.map((image) => (
